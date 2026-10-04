@@ -20,6 +20,11 @@ form .addEventListener("submit" , (e) =>{
     e.preventDefault();
     console.log(formButton.textContent)
     
+    if(!nameInput.value.trim() || priceInput.value.trim() ){
+
+        alert("fill all inputs first !");
+        return;
+    }
     const phone ={
         name :nameInput.value,
         price:priceInput .value,
